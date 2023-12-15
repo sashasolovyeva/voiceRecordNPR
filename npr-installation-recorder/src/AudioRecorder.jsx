@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import storage from "./firebaseConfig.js"
-import {ref, uploadBytesResumable, getDownloadURL, updateMetadata} from "firebase/storage"
+import {ref, uploadBytesResumable, getDownloadURL, updateMetadata} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js"
 import {v4 as uuidv4} from "uuid";
 
 var showPlayer;
