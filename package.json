@@ -1,0 +1,10 @@
+{
+  "homepage": "https://sashasolovyeva.github.io/https://sashasolovyeva.github.io/voiceRecordNPR/npr-installation-recorder/",
+  "devDependencies": {
+    "gh-pages": "^6.1.0"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
