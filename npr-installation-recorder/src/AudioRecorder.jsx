@@ -3,6 +3,13 @@ import storage from "./firebaseConfig.js"
 import {ref, uploadBytesResumable, getDownloadURL, updateMetadata} from "firebase/storage"
 import {v4 as uuidv4} from "uuid";
 
+var showPlayer;
+var setValue = () => {};
+
+export function updatePlayerVisibility(){
+    setValue(true);
+}
+
 const mimeType = "audio/webm";
 const AudioRecorder = () => {
     const [permission, setPermission] = useState(false);
@@ -101,8 +108,10 @@ const AudioRecorder = () => {
         );
     };
 
+    [showPlayer, setValue] = useState(false);
+
     return (
-        <div>
+        <div style={{ display: showPlayer ? "block" : "none" }}>
             <h2>Say something!</h2>
             <main>
                 <div className="audio-controls">
